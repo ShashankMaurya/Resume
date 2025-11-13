@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# But not these file types
+!*.tex
+!*.png
+!*.jpeg
+!*.gitignore

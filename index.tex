@@ -1,0 +1,226 @@
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,11pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+\usepackage{setspace}
+\usepackage[inline]{enumitem}
+
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+
+\Huge{Shashank Maurya} \\[4.5pt]
+\large{Software Developer} \\[7.5pt]
+
+\href{https://github.com/shashankmaurya}{\raisebox{-0.05\height}\faGithub\ ShashankMaurya} \ $|$ \ 
+\href{https://www.linkedin.com/in/shashankmaurya01/}{\raisebox{-0.05\height}\faLinkedin\ ShashankMaurya01} \ $|$ \ 
+\href{https://shashankmaurya.github.io/Portfolio/}{\raisebox{-0.05\height}\faGlobe \ Portfolio} \ $|$ \ 
+\href{tel:8292288525}{\raisebox{-0.05\height}\faMobile \ +91 8292288525} \\[2pt]
+\href{mailto:shashankmaurya260101@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ shashankmaurya260101@gmail.com} \\ 
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	Summary
+%----------------------------------------------------------------------------------------
+\section{Summary}
+I am a Web Developer with a variety of skills and an eagerness to learn more. I'm currently working at \textit{Bosch Global Software Technologies} as a \textbf{Backend Developer}.
+
+%----------------------------------------------------------------------------------------
+%	Work Experience
+%----------------------------------------------------------------------------------------
+\section{Work Experience}
+
+\begin{jobshort}{Bosch Global Software Technologies \ $|$ \ \href{https://drive.google.com/file/d/1hNmzpBB9Um7AT7RnKK6kc4xhsKgf8IDf/view?usp=sharing}{Associate Software Developer}}{Jan 2024 - present}
+\begin{itemize}
+    \item Developed and maintained scalable ETL pipelines and data exporters in \textbf{Python}, automating data flows that reduced manual processing time by 40\%.
+    \item Optimized backend data handling using OracleSQL, Hadoop, and Docker, improving query performance by 45\% and enhancing data reliability across datasets exceeding 10M+ records.
+    \item Delivered end-to-end data solutions for internal teams and clients, enabling faster analytics, improved reporting accuracy, and high system uptime.
+\end{itemize}
+\end{jobshort}
+
+
+\begin{jobshort}{SNTI TATA STEEL LTD. \ $|$ \ \href{https://drive.google.com/file/d/1AJs1bdv-YMY8GrjvO3VE4SJwJIv275PG/view?usp=share_link}{SDE (Intern)}}{Dec 2022 - Jan 2023}
+\begin{itemize}
+    \item Candidate Report Management System – Built and deployed a \textbf{Java–MySQL} application that streamlined report workflows and reduced generation time by 30\% through enhanced usability and automation.
+\end{itemize}
+\end{jobshort}
+
+\begin{jobshort}{HighRadius Technologies Pvt. Ltd. \ $|$ \ \href{https://drive.google.com/drive/folders/1L19tKgR8kvodTWy2_siyHbBTPfNWRRSx?usp=share_link}{SDE (Intern)}}{June 2022 - Nov 2022}
+    \begin{itemize}
+    \item Developed an AI-enabled B2B FinTech Invoice Management Application using ReactJS and \textbf{Servlets}, automating invoice tracking and improving processing efficiency by 35\%.
+    \item Engineered seamless database migration workflows from \textbf{MySQL} to Snowflake Data Warehouse via Amazon S3, ensuring secure and lossless data transfer.
+\end{itemize}
+\end{jobshort}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{small}    
+\begin{itemize*}[itemjoin=\quad, after=\unskip]
+    \item Core Java
+    \item Advanced Python
+    \item C/C++
+    \item SQL
+    \item BaSH
+    \item HTML/CSS/JS \\
+    \item Data Structures and Algorithms
+    \item Database Management Systems
+    \item Computer Networks
+    \item Operating Systems
+\end{itemize*}
+\end{small}
+
+%----------------------------------------------------------------------------------------
+%	Academic Qualification
+%----------------------------------------------------------------------------------------
+\section{Academic Qualification}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2019 - 2023 & \textbf{B.Tech} at \textbf{Kalinga Institute of Industrial Technology} \hfill \href{https://drive.google.com/drive/folders/1h5LNKPWNgZ1L8anU-jVDjidfd6seIepw?usp=share_link}{(GPA: 8.4/10.0)} \\
+ & \textbf{Stream}: Computer Science and Systems Engineering \\
+ & \textbf{Project}: Full-Stack Web app on Java \\
+
+% 2019 & Class 12th ISC \hfill  \href{https://drive.google.com/file/d/1VUGBFn-Tst5EYfUdOa0bjrE_nvJRgU1V/view?usp=share_link}{(82.4\%)} \\
+
+% 2017 & Class 10th ICSE \hfill  \href{https://drive.google.com/file/d/1KL4cvW1TC0VityUAkkA8DcghtfiuUKQi/view?usp=share_link}{(88.6\%)} \\
+\end{tabularx}
+  
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+
+\textbf{Gamey} & \hfill \href{https://github.com/ShashankMaurya/Gameyy.git}{Link to Code} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Developed a marketplace web application using \textbf{Spring Boot} and ReactJS, integrating multiple APIs for real-time data and leveraging \textbf{Google Firebase} caching to improve load performance by 70\% and enhance user experience}  \\[35
+pt]
+
+\textbf{Notes} & \hfill \href{https://github.com/ShashankMaurya/Notes.git}{Link to Code} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{An Android app using \textbf{Java} and Room Database for efficient offline note management}  \\
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+%	Certificates
+%----------------------------------------------------------------------------------------
+\section{Certificates}
+
+\begin{itemize*}[itemjoin=\quad, after=\unskip]
+    \item \href{https://drive.google.com/file/d/1hNmzpBB9Um7AT7RnKK6kc4xhsKgf8IDf/view?usp=drive_link}{Java Full-Stack}
+    \item \href{https://drive.google.com/drive/folders/1XwdbdVNaHuVHK1NeESkouDhpwcP_5glF?usp=drive_link}{Android Development}
+    \item \href{https://drive.google.com/file/d/1CvSL6iyRV-ZCHSulV9tekqkfXSV8wti2/view?usp=drive_link}{PCAP: \begin{small}Programming Essentials in Python\end{small}} 
+\end{itemize*}
+
+% \vfill
+% \center{\footnotesize Last updated: \today}
+
+\end{document}
