@@ -82,10 +82,11 @@
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[0pt] % reduced space after job title
     \end{tabularx}
     }
     {
+    \vspace{10pt} % increase space after job block
     }
 
 \newenvironment{joblong}[2]
