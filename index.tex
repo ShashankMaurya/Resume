@@ -6,36 +6,16 @@
 \documentclass[a4paper,10pt]{article}
 
 %----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
 %	PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
-\usepackage{parskip} 	
-\usepackage{setspace}
 \usepackage[inline]{enumitem}
+\usepackage{pifont}
 
 
 %other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[top=1.2cm, bottom=1.2cm, left=1.2cm, right=1.2cm]{geometry}
-\usepackage{pifont}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -47,23 +27,15 @@
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 
 %to prevent spillover of tabular into next pages
-\usepackage{supertabular}
-\usepackage{tabularx}
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
 
 %custom \section
-\usepackage{titlesec}				
+\usepackage{titlesec}
 \usepackage{multicol}
-\usepackage{multirow}
 
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{1pt}{4pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
@@ -75,15 +47,9 @@
     linkcolor=black,
     citecolor=black
 }
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
 
 %for social icons
 \usepackage{fontawesome5}
-
-%debug page outer frames
-%\usepackage{showframe}
-
 
 % job listing environments
 \newenvironment{jobshort}[2]
@@ -187,27 +153,27 @@
 %	Projects
 %----------------------------------------------------------------------------------------
 \section{Projects}
-  \begin{itemize}[leftmargin=*, itemsep=-10pt]
-      \item \textbf{Gamey \ding{213} E-Commerce Marketplace} \hfill \href{https://github.com/ShashankMaurya/Gameyy.git}{(github.com/ShashankMaurya/Gameyy.git)}                                                                                                         \\
-            Developed a marketplace web application using \textbf{Spring Boot} and ReactJS, integrating multiple APIs for real-time data and leveraging \textbf{Google Firebase} caching to improve load performance by 70\% and enhance user experience\\
+\begin{itemize}[leftmargin=*, itemsep=-10pt]
+    \item \textbf{Gamey \ding{213} E-Commerce Marketplace} \hfill \href{https://github.com/ShashankMaurya/Gameyy.git}{(github.com/ShashankMaurya/Gameyy.git)}                                                                                                         \\
+          Developed a marketplace web application using \textbf{Spring Boot} and ReactJS, integrating multiple APIs for real-time data and leveraging \textbf{Google Firebase} caching to improve load performance by 70\% and enhance user experience\\
 
-      \item \textbf{Notes \ding{213} Offline Notes Manager (Android)} \hfill \href{https://github.com/ShashankMaurya/Notes.git}{(github.com/ShashankMaurya/Notes.git)}                                                                                                           \\
-            Developed an Android application using \textbf{Java} and Room Database to provide robust, efficient, and reliable offline note management for users.
-  \end{itemize}
+    \item \textbf{Notes \ding{213} Offline Notes Manager (Android)} \hfill \href{https://github.com/ShashankMaurya/Notes.git}{(github.com/ShashankMaurya/Notes.git)}                                                                                                           \\
+          Developed an Android application using \textbf{Java} and Room Database to provide robust, efficient, and reliable offline note management for users.
+\end{itemize}
 
 
 %----------------------------------------------------------------------------------------
 %	Academic Qualification
 %----------------------------------------------------------------------------------------
 \section{Academic Qualification}
-  \begin{itemize}[leftmargin=0pt, itemsep=-5pt, label={}]
-      \item 2019 - 2023 \quad \textbf{B.Tech}, Computer Science, \textbf{Kalinga Institute of Industrial Technology}\hfill \href{https://drive.google.com/drive/folders/1h5LNKPWNgZ1L8anU-jVDjidfd6seIepw?usp=share_link}{(GPA: 8.4/10.0)}
-      %   & \textbf{Stream}: Computer Science and Systems Engineering                                                                                                                                     \\
-      %   & \textbf{Project}: Full-Stack Web app on Java                                                                                                                                                  \\
+\begin{itemize}[leftmargin=0pt, itemsep=-5pt, label={}]
+    \item 2019 - 2023 \quad \textbf{B.Tech}, Computer Science, \textbf{Kalinga Institute of Industrial Technology}\hfill \href{https://drive.google.com/drive/folders/1h5LNKPWNgZ1L8anU-jVDjidfd6seIepw?usp=share_link}{(GPA: 8.4/10.0)}
+          %   & \textbf{Stream}: Computer Science and Systems Engineering                                                                                                                                     \\
+          %   & \textbf{Project}: Full-Stack Web app on Java                                                                                                                                                  \\
 
-      % 2019 & Class 12th ISC \hfill  \href{https://drive.google.com/file/d/1VUGBFn-Tst5EYfUdOa0bjrE_nvJRgU1V/view?usp=share_link}{(82.4\%)} \\
-      % 2017 & Class 10th ICSE \hfill  \href{https://drive.google.com/file/d/1KL4cvW1TC0VityUAkkA8DcghtfiuUKQi/view?usp=share_link}{(88.6\%)} \\
-  \end{itemize}
+          % 2019 & Class 12th ISC \hfill  \href{https://drive.google.com/file/d/1VUGBFn-Tst5EYfUdOa0bjrE_nvJRgU1V/view?usp=share_link}{(82.4\%)} \\
+          % 2017 & Class 10th ICSE \hfill  \href{https://drive.google.com/file/d/1KL4cvW1TC0VityUAkkA8DcghtfiuUKQi/view?usp=share_link}{(88.6\%)} \\
+\end{itemize}
 
 
 %----------------------------------------------------------------------------------------
@@ -224,7 +190,7 @@
     \item \href{https://drive.google.com/file/d/1CvSL6iyRV-ZCHSulV9tekqkfXSV8wti2/view?usp=drive_link}{\textbf{Cisco} PCAP: \begin{small}Programming Essentials in Python\end{small}}
 
 \end{itemize}
-  
+
 
 \vfill
 \center{\footnotesize Last updated: \today}
