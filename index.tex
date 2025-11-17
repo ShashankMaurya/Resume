@@ -10,6 +10,8 @@
 %----------------------------------------------------------------------------------------
 \usepackage{url}
 \usepackage[inline]{enumitem}
+% padding after each itemize environment
+\setlist[itemize]{after=\vspace{-5pt}}
 \usepackage{pifont}
 
 
@@ -35,7 +37,7 @@
 \usepackage{multicol}
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{1pt}{4pt}
+\titlespacing{\section}{0pt}{-1pt}{4pt}
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
@@ -60,7 +62,7 @@
     \end{tabularx}
     }
     {
-    \vspace{-5pt} % space after job block
+    \vspace{-3pt} % space after job block
     }
 
 %----------------------------------------------------------------------------------------
