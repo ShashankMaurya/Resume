@@ -60,7 +60,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{4pt}{4pt}
+\titlespacing{\section}{0pt}{1pt}{4pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -68,7 +68,13 @@
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\hypersetup{
+    colorlinks=true,
+    breaklinks=true,
+    urlcolor=black,
+    linkcolor=black,
+    citecolor=black
+}
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
 
@@ -83,11 +89,11 @@
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[0pt] % reduced space after job title
+    \textbf{#1} & \hfill &  #2 \\[-10pt] % space after job title
     \end{tabularx}
     }
     {
-    \vspace{10pt} % increase space after job block
+    \vspace{-5pt} % space after job block
     }
 
 \newenvironment{joblong}[2]
@@ -119,22 +125,34 @@
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
 
-    \Huge{Shashank Maurya}                                                           \\[4.5pt]
-    \large{Software Developer}                                                       \\[7.5pt]
+    \Huge{Shashank Maurya}                                                                                                   \\[4.5pt]
+    \large\textbf{Software Developer} --- \textbf{Backend} --- \textbf{Data Pipelines}                                       \\[7.5pt]
 
-    \href{https://github.com/shashankmaurya}{\faGithub\ GitHub} \ $|$ \
-    \href{https://www.linkedin.com/in/shashankmaurya01/}{\faLinkedin\ LinkedIn} \ $|$ \
-    \href{https://shashankmaurya.github.io/Portfolio/}{\faGlobe\ Portfolio}          \\[2pt]
-    \href{tel:8292288525}{\faMobile \ +91 8292288525} \ $|$ \
-    \href{mailto:shashankmaurya260101@gmail.com}{\faEnvelope \ shashankmaurya260101@gmail.com} \ $|$ \
-    \href{https://maps.app.goo.gl/1jdNXAY2RCsecJSLA}{\faMapMarker\ Bengaluru, India} \\
+    \href{https://github.com/shashankmaurya}{\faGithub\ \textcolor{linkcolour}{github.com/shashankmaurya}} \ $|$
+    \href{https://www.linkedin.com/in/shashankmaurya01/}{\faLinkedin\ \textcolor{linkcolour}{linkedin.com/in/shashankmaurya01}} \ $|$
+    \href{https://shashankmaurya.github.io/Portfolio/}{\faGlobe\ \textcolor{linkcolour}{shashankmaurya.github.io/Portfolio}} \\[2pt]
+    \href{tel:8292288525}{\faMobile \ \textcolor{linkcolour}{+91 8292288525}} \ $|$
+    \href{mailto:shashankmaurya260101@gmail.com}{\faEnvelope \ \textcolor{linkcolour}{shashankmaurya260101@gmail.com}} \ $|$
+    \href{https://maps.app.goo.gl/1jdNXAY2RCsecJSLA}{\faMapMarker\ \textcolor{linkcolour}{Bengaluru, India}}                 \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	Summary
 %----------------------------------------------------------------------------------------
 \section{Summary}
-\textbf{Software Developer} with nearly 2 years of experience at \emph{Bosch} specializing in Python, ETL pipelines , and large-scale database optimization (OracleSQL, Hadoop). Eager to apply data engineering and backend development skills to a new challenge in a fast-paced environment.
+\textbf{Software Developer} with 2 years of experience specializing in \textbf{ETL pipelines}, and large-scale database optimization (OracleSQL, Hadoop). At \textbf{Bosch Global Software Technologies}, led the architecture and development of multiple data-exporters and ETL solutions that improved data processing efficiency by up to 45\% across datasets exceeding 10M+ records. Skilled in \textbf{Java}, \textbf{Python}, \textbf{SQL}, and \textbf{System Design}, with a focus on automation, reliability, and scalable backend architecture.
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Core Skills}
+\begin{itemize}[leftmargin=*, itemsep=-5pt]
+    \item \textbf{Languages}: Advanced Python, Core Java, C/C++, HTML/CSS/JS, BaSH, SQL
+    \item \textbf{Databases}: OracleSQL, MySQL, Firebase
+    \item \textbf{Frameworks \& Technologies}: Spring Boot, REST APIs
+    \item \textbf{Tools \& Platforms}: Hadoop, Kafka, Docker, Jenkins, Git, Linux, CI/CD
+    \item \textbf{Core Concepts}: Data Structures \& Algorithms, Database Management, Computer Networks, Operating Systems, ETL Pipelines, System Design, Microservices
+\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	Work Experience
@@ -142,83 +160,71 @@
 \section{Work Experience}
 
 \begin{jobshort}{Bosch Global Software Technologies \ $|$ \ \href{https://drive.google.com/file/d/1hNmzpBB9Um7AT7RnKK6kc4xhsKgf8IDf/view?usp=sharing}{Associate Software Developer}}{Jan 2024 - present}
-    \begin{itemize}
+    \begin{itemize}[itemsep=-5pt]
         \item Developed and maintained scalable ETL pipelines and data exporters in \textbf{Python}, automating data flows that reduced manual processing time by 40\%.
-        \item Optimized backend data handling using OracleSQL, Hadoop, and Docker, improving query performance by 45\% and enhancing data reliability across datasets exceeding 10M+ records.
-        \item Delivered end-to-end data solutions for internal teams and clients, enabling faster analytics, improved reporting accuracy, and high system uptime.
+        \item Developed, optimized, redesigned and reconfigured multiple data exporters to work within a \textbf{large-scale ETL framework}, enabling \textbf{unified ingestion into several target systems} (like HDFS, Kafka topics, OracleSQL tables, and Splunk indexes) using \textbf{standardized data-models} and a \textbf{harmonizing layer} (to support cross tool dependency); \textbf{leveraged Kafka Producer–Consumer Architecture} and \textbf{PySpark} to boost pipeline scalability and developer efficiency, improving data throughput by 35\% and reducing integration effort by 40\%.
+        \item Optimized backend data handling using \textbf{OracleSQL}, \textbf{Hadoop}, and \textbf{Docker}, improving query performance by 45\% and enhancing data reliability across datasets exceeding 10M+ records.
+              % \item Delivered end-to-end data solutions for internal teams and clients, enabling faster analytics, improved reporting accuracy, and high system uptime.
+        \item Developed an interactive \textbf{Streamlit} frontend to visualize FastAPI endpoint data and deliver fundamental data analytics, improving data accessibility for internal teams and reducing lookup and debugging time by 40\% across multiple tools.
     \end{itemize}
 \end{jobshort}
 
 
 \begin{jobshort}{SNTI TATA STEEL LTD. \ $|$ \ \href{https://drive.google.com/file/d/1AJs1bdv-YMY8GrjvO3VE4SJwJIv275PG/view?usp=share_link}{SDE (Intern)}}{Dec 2022 - Jan 2023}
-    \begin{itemize}
+    \begin{itemize}[itemsep=-5pt]
         \item Built and deployed 'Candidate Report Management System' using \textbf{Java \& MySQL}, which streamlined report workflows and reduced generation time by 30\% through enhanced usability and automation.
     \end{itemize}
 \end{jobshort}
 
 \begin{jobshort}{HighRadius Technologies Pvt. Ltd. \ $|$ \ \href{https://drive.google.com/drive/folders/1L19tKgR8kvodTWy2_siyHbBTPfNWRRSx?usp=share_link}{SDE (Intern)}}{June 2022 - Nov 2022}
-    \begin{itemize}
+    \begin{itemize}[itemsep=-5pt]
         \item Developed an AI-enabled B2B FinTech Invoice Management Application using ReactJS and \textbf{Servlets}, automating invoice tracking and improving processing efficiency by 35\%.
         \item Engineered seamless database migration workflows from \textbf{MySQL} to Snowflake Data Warehouse via Amazon S3, ensuring secure and lossless data transfer.
     \end{itemize}
 \end{jobshort}
 
 %----------------------------------------------------------------------------------------
-%	SKILLS
+%	Projects
 %----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{itemize}[leftmargin=*, itemsep=-5pt]
-    \item \textbf{Languages}: Advanced Python, Core Java, C/C++, HTML/CSS/JS, BaSH, SQL
-    \item \textbf{Databases}: OracleSQL, MySQL, Firebase
-    \item \textbf{Frameworks \& Technologies}: Spring Boot, REST APIs
-    \item \textbf{Tools \& Platforms}: Hadoop, Docker, Git, Linux
-    \item \textbf{Core Concepts}: Data Structures \& Algorithms, Database Management, Computer Networks, Operating Systems, ETL Pipelines
-\end{itemize}
+\section{Projects}
+  \begin{itemize}[leftmargin=*, itemsep=-10pt]
+      \item \textbf{Gamey \ding{213} E-Commerce Marketplace} \hfill \href{https://github.com/ShashankMaurya/Gameyy.git}{(github.com/ShashankMaurya/Gameyy.git)}                                                                                                         \\
+            Developed a marketplace web application using \textbf{Spring Boot} and ReactJS, integrating multiple APIs for real-time data and leveraging \textbf{Google Firebase} caching to improve load performance by 70\% and enhance user experience\\
+
+      \item \textbf{Notes \ding{213} Offline Notes Manager (Android)} \hfill \href{https://github.com/ShashankMaurya/Notes.git}{(github.com/ShashankMaurya/Notes.git)}                                                                                                           \\
+            Developed an Android application using \textbf{Java} and Room Database to provide robust, efficient, and reliable offline note management for users.
+  \end{itemize}
+
 
 %----------------------------------------------------------------------------------------
 %	Academic Qualification
 %----------------------------------------------------------------------------------------
 \section{Academic Qualification}
- {\small
-  \begin{tabularx}{\linewidth}{@{}l X@{}}
-      2019 - 2023 & \textbf{B.Tech} at \textbf{Kalinga Institute of Industrial Technology} \hfill \href{https://drive.google.com/drive/folders/1h5LNKPWNgZ1L8anU-jVDjidfd6seIepw?usp=share_link}{(GPA: 8.4/10.0)} \\
-                  & \textbf{Stream}: Computer Science and Systems Engineering                                                                                                                                     \\
-                  & \textbf{Project}: Full-Stack Web app on Java                                                                                                                                                  \\
+  \begin{itemize}[leftmargin=0pt, itemsep=-5pt, label={}]
+      \item 2019 - 2023 \quad \textbf{B.Tech}, Computer Science, \textbf{Kalinga Institute of Industrial Technology}\hfill \href{https://drive.google.com/drive/folders/1h5LNKPWNgZ1L8anU-jVDjidfd6seIepw?usp=share_link}{(GPA: 8.4/10.0)}
+      %   & \textbf{Stream}: Computer Science and Systems Engineering                                                                                                                                     \\
+      %   & \textbf{Project}: Full-Stack Web app on Java                                                                                                                                                  \\
 
       % 2019 & Class 12th ISC \hfill  \href{https://drive.google.com/file/d/1VUGBFn-Tst5EYfUdOa0bjrE_nvJRgU1V/view?usp=share_link}{(82.4\%)} \\
-
       % 2017 & Class 10th ICSE \hfill  \href{https://drive.google.com/file/d/1KL4cvW1TC0VityUAkkA8DcghtfiuUKQi/view?usp=share_link}{(88.6\%)} \\
-  \end{tabularx}
- }
-
-%----------------------------------------------------------------------------------------
-%	Projects
-%----------------------------------------------------------------------------------------
-\section{Projects}
- {\small
-  \begin{tabularx}{\linewidth}{ @{}l r@{} }
-
-      \textbf{Gamey \ding{213} E-Commerce Marketplace}          & \hfill \href{https://github.com/ShashankMaurya/Gameyy.git}{Link to Code}                                                                                                                                   \\[3.75pt]
-      \multicolumn{2}{@{}X@{}}{Developed a marketplace web application using \textbf{Spring Boot} and ReactJS, integrating multiple APIs for real-time data and leveraging \textbf{Google Firebase} caching to improve load performance by 70\% and enhance user experience} \\[20
-      pt]
-
-      \textbf{Notes \ding{213} Offline Notes Manager (Android)} & \hfill \href{https://github.com/ShashankMaurya/Notes.git}{Link to Code}                                                                                                                                    \\[3.75pt]
-      \multicolumn{2}{@{}X@{}}{Developed an Android application using \textbf{Java} and Room Database to provide robust, efficient, and reliable offline note management for users.}                                                                                         \\
-  \end{tabularx}
- }
+  \end{itemize}
 
 
 %----------------------------------------------------------------------------------------
-%	Certificates
+%	Certifications
 %----------------------------------------------------------------------------------------
-\section{Certificates}
- {\small
-  \begin{itemize*}[itemjoin=\quad, after=\unskip]
-      \item \href{https://drive.google.com/file/d/1hNmzpBB9Um7AT7RnKK6kc4xhsKgf8IDf/view?usp=drive_link}{\textbf{BGSW}: Java Full-Stack}
-      \item \href{https://drive.google.com/drive/folders/1XwdbdVNaHuVHK1NeESkouDhpwcP_5glF?usp=drive_link}{\textbf{KIIT Dev. Club}: Android Development}
-      \item \href{https://drive.google.com/file/d/1CvSL6iyRV-ZCHSulV9tekqkfXSV8wti2/view?usp=drive_link}{\textbf{Cisco} PCAP: \begin{small}Programming Essentials in Python\end{small}}
-  \end{itemize*}
- }
+\section{Certifications}
+%   \href{https://drive.google.com/file/d/1hNmzpBB9Um7AT7RnKK6kc4xhsKgf8IDf/view?usp=drive_link}{\textbf{BGSW}: Java Full-Stack},
+%   \href{https://drive.google.com/drive/folders/1XwdbdVNaHuVHK1NeESkouDhpwcP_5glF?usp=drive_link}{\textbf{KIIT Dev.Club}: Android Development},
+%   \href{https://drive.google.com/file/d/1CvSL6iyRV-ZCHSulV9tekqkfXSV8wti2/view?usp=drive_link}{\textbf{Cisco} PCAP: \begin{small}Programming Essentials in Python\end{small}}
+
+\begin{itemize}[leftmargin=*, itemsep=-5pt]
+    \item \href{https://drive.google.com/file/d/1hNmzpBB9Um7AT7RnKK6kc4xhsKgf8IDf/view?usp=drive_link}{\textbf{BGSW}: Java Full-Stack},
+    \item \href{https://drive.google.com/drive/folders/1XwdbdVNaHuVHK1NeESkouDhpwcP_5glF?usp=drive_link}{\textbf{KIIT Dev.Club}: Android Development},
+    \item \href{https://drive.google.com/file/d/1CvSL6iyRV-ZCHSulV9tekqkfXSV8wti2/view?usp=drive_link}{\textbf{Cisco} PCAP: \begin{small}Programming Essentials in Python\end{small}}
+
+\end{itemize}
+  
 
 \vfill
 \center{\footnotesize Last updated: \today}
