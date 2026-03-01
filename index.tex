@@ -10,6 +10,8 @@
 %----------------------------------------------------------------------------------------
 \usepackage{url}
 \usepackage[inline]{enumitem}
+\usepackage{setspace}
+\setstretch{.9} % for a custom line space
 % padding after each itemize environment
 \setlist[itemize]{after=\vspace{-5pt}}
 \usepackage{pifont}
@@ -94,18 +96,20 @@
 %	Summary
 %----------------------------------------------------------------------------------------
 \section{Summary}
-\noindent\textbf{Software Developer} with 2 years of experience specializing in \textbf{ETL pipelines}, and large-scale database optimization (OracleSQL, Hadoop). At \textbf{Bosch Global Software Technologies}, led the architecture and development of multiple data-exporters and ETL solutions that improved data processing efficiency by up to 45\% across datasets exceeding 10M+ records. Skilled in \textbf{Java}, \textbf{Python}, \textbf{SQL}, and \textbf{System Design}, with a focus on automation, reliability, and scalable backend architecture. Passionate about leveraging \textbf{AI} and \textbf{cloud} technologies to solve real-world supply chain and enterprise challenges.
+\noindent\textbf{Server-side Software Developer} with 2+ years of production experience building scalable backend systems using \textbf{Java} and \textbf{Spring Boot}. Experienced in designing and delivering multithreaded, high-throughput services, REST/JSON APIs, and CI/CD-driven deployments. At \textbf{Bosch Global Software Technologies}, led development of data-exporters and ETL solutions that improved processing efficiency by up to 45\% across datasets exceeding 10M records. Strong in \textbf{concurrency / multithreading}, \textbf{Maven}, \textbf{Git}, \textbf{unit testing}, and cloud integrations (AWS RDS/S3/ElastiCache). Focused on secure coding, observability, and reliable operations in Agile teams.
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Core Skills}
 \begin{itemize}[leftmargin=*, itemsep=-5pt]
-    \item \textbf{Languages}: Advanced Python, Core Java, C/C++, HTML/CSS/JS, BaSH, SQL
-    \item \textbf{Databases}: OracleSQL, MySQL, Firebase
-    \item \textbf{Frameworks \& Technologies}: Spring Boot, REST/SOAP APIs
-    \item \textbf{Tools \& Platforms}: Hadoop, Kafka, Docker, Jenkins, Git, Linux, CI/CD
-    \item \textbf{Core Concepts}: Data Structures \& Algorithms, Database Management, Computer Networks, Operating Systems, ETL Pipelines, UML, Technical Documentation, System Design, Microservices
+    \item \textbf{Languages}: Java (server-side), Advanced Python, C/C++, SQL, Bash
+    \item \textbf{Frameworks \& Libraries}: Spring Boot, Spring MVC, REST/JSON, PySpark
+    \item \textbf{Concurrency}: Multithreading in Java, ExecutorService, thread-safe collections, synchronization patterns
+    \item \textbf{Databases \& Messaging}: OracleSQL, Postgres (RDS), Cassandra, Kafka, Redis
+    \item \textbf{Cloud \& DevOps}: AWS (RDS, S3, CloudFront, ElastiCache), Docker, Jenkins, CI/CD pipelines, Maven, Git
+    \item \textbf{Security \& Identity}: Secure coding practices, OAuth2 / OpenID Connect, basic SCIM familiarity
+    \item \textbf{Core Concepts}: System Design, Microservices, APIs, Unit Testing, Observability, Agile development
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -117,7 +121,7 @@
     \begin{itemize}[itemsep=-5pt]
         \item Developed and maintained scalable ETL pipelines and data exporters in \textbf{Python}, implementing \textbf{comprehensive unit testing} (using \textbf{PyTest} and \textbf{Unittest} libraries) and validation frameworks that ensured \textbf{99\%+ data integrity} while automating data flows that \textbf{reduced manual processing time by 40\%}.
         \item Presented technical roadmaps to stakeholders to align data architecture with business goals, resulting in \textbf{improved cross-team collaboration} and \textbf{faster project delivery times by 25\%}.
-        \item Developed, optimized, redesigned and reconfigured multiple data exporters to work within a \textbf{large-scale ETL framework}, enabling \textbf{unified ingestion into several target systems} (like HDFS, Kafka topics, OracleSQL tables, and Splunk indexes) using \textbf{standardized data-models} and a \textbf{harmonizing layer} (to support cross tool dependency); \textbf{leveraged Kafka Producer–Consumer Architecture} and \textbf{PySpark} to boost pipeline scalability and developer efficiency, \textbf{improving data throughput by 35\%} and \textbf{reducing integration effort by 40\%}.
+        \item Developed, optimized, redesigned and reconfigured multiple data exporters to work within a \textbf{large-scale ETL framework}, enabling \textbf{unified ingestion into several target systems} (like HDFS, Kafka topics, OracleSQL tables, and Splunk indexes) using \textbf{standardized data-models}, \textbf{cache management (Redis)} and a \textbf{harmonizing layer} (to support cross tool dependency); \textbf{leveraged Kafka Producer–Consumer Architecture} and \textbf{PySpark} to boost pipeline scalability and developer efficiency, \textbf{improving data throughput by 35\%} and \textbf{reducing integration effort by 40\%}.
         \item Optimized backend data handling and XML response processing using \textbf{OracleSQL}, \textbf{Hadoop}, and \textbf{Docker}, \textbf{improving query performance by 45\%} and \textbf{enhancing data reliability across datasets exceeding 10M+ records}, while providing \textbf{production support} to maintain high quality \textbf{live-site operations}.
         % \item Delivered end-to-end data solutions for internal teams and clients, enabling faster analytics, improved reporting accuracy, and high system uptime.
         \item Developed an interactive \textbf{Streamlit} frontend to visualize FastAPI endpoint data and deliver fundamental data analytics, improving data accessibility for internal teams and \textbf{reducing lookup and debugging time by 50\% across multiple tools}.
@@ -143,8 +147,8 @@
 %----------------------------------------------------------------------------------------
 \section{Projects}
 \begin{itemize}[leftmargin=*, itemsep=-10pt]
-    \item \textbf{Gamey \ding{213} E-Commerce Marketplace} \hfill \href{https://github.com/ShashankMaurya/Gameyy.git}{(github.com/ShashankMaurya/Gameyy.git)}                                                                                                         \\
-          Developed a marketplace web application using \textbf{Spring Boot} and ReactJS, integrating multiple APIs for real-time data and leveraging \textbf{Google Firebase} caching to improve load performance by 70\% and enhance user experience\\
+        \item \textbf{Gamey \ding{213} E-Commerce Marketplace} \hfill \href{https://github.com/ShashankMaurya/Gameyy.git}{(github.com/ShashankMaurya/Gameyy.git)}                                                                                                         \\
+            Developed a marketplace web application using \textbf{Spring Boot} (Maven) and ReactJS, implemented REST APIs, server-side session and cache management (Redis), and optimized backend concurrency for improved request throughput and a 70\% improvement in perceived load performance.\\
 
     \item \textbf{Notes \ding{213} Offline Notes Manager (Android)} \hfill \href{https://github.com/ShashankMaurya/Notes.git}{(github.com/ShashankMaurya/Notes.git)}                                                                                                           \\
           Developed an Android application using \textbf{Java} and Room Database to provide robust, efficient, and reliable offline note management for users.
