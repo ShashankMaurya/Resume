@@ -13,6 +13,8 @@
 % padding after each itemize environment
 \setlist[itemize]{after=\vspace{-5pt}}
 \usepackage{pifont}
+\usepackage{setspace}
+\setstretch{0.85} % for a custom line space
 
 
 %other packages for formatting
@@ -58,7 +60,7 @@
 \newenvironment{jobshort}[2]
     {
     \noindent\begin{tabularx}{\linewidth}{l X r}
-    	\textbf{#1} & \hfill &  #2 \\[-10pt] % space after job title
+    	\textbf{#1} & \hfill #2 \\[-10pt] % space after job title
     \end{tabularx}
     }
     {
@@ -94,18 +96,20 @@
 %	Summary
 %----------------------------------------------------------------------------------------
 \section{Summary}
-\noindent\textbf{Software Developer} with 2 years of experience specializing in \textbf{ETL pipelines}, and large-scale database optimization (OracleSQL, Hadoop). At \textbf{Bosch Global Software Technologies}, led the architecture and development of multiple data-exporters and ETL solutions that improved data processing efficiency by up to 45\% across datasets exceeding 10M+ records. Skilled in \textbf{Java}, \textbf{Python}, \textbf{SQL}, and \textbf{System Design}, with a focus on automation, reliability, and scalable backend architecture. Passionate about leveraging \textbf{AI} and \textbf{cloud} technologies to solve real-world supply chain and enterprise challenges.
+\noindent\textbf{Software Developer} with 2 years of professional experience specializing in building \textbf{ETL pipelines}, \textbf{backend services}, \textbf{RESTful APIs} and \textbf{large-scale database optimization} (\textbf{OracleSQL}, \textbf{Hadoop}). Delivered robust backend components at \textbf{Bosch Global Software Technologies} that \textbf{improved processing efficiency by up to 45\%} across datasets exceeding 10M records. My core strengths include \textbf{Java}, \textbf{Python} (OOP), \textbf{backend API design} and validation, \textbf{database design} (SQL/NoSQL), containerization with \textbf{Docker}, and CI/CD/GitOps workflows (\textbf{Jenkins}, \textbf{GitHub Actions}). Familiar with \textbf{Node.js}/\textbf{Express} and microservices patterns; experienced in implementing testing strategies (\textbf{unit}, \textbf{integration}), logging, monitoring and troubleshooting for production systems. Strong collaborator in Agile teams, focused on reliability, automation and developer productivity. Passionate about leveraging \textbf{AI} and \textbf{cloud} technologies to solve real-world \textbf{supply chain} and enterprise challenges.
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Core Skills}
 \begin{itemize}[leftmargin=*, itemsep=-5pt]
-    \item \textbf{Languages}: Advanced Python, Core Java, C/C++, HTML/CSS/JS, BaSH, SQL
-    \item \textbf{Databases}: OracleSQL, MySQL, Firebase
-    \item \textbf{Frameworks \& Technologies}: Spring Boot, REST/SOAP APIs
-    \item \textbf{Tools \& Platforms}: Hadoop, Kafka, Docker, Jenkins, Git, Linux, CI/CD
-    \item \textbf{Core Concepts}: Data Structures \& Algorithms, Database Management, Computer Networks, Operating Systems, ETL Pipelines, UML, Technical Documentation, System Design, Microservices
+    \item \textbf{Languages}: Advanced Python (OOP), Core Java, Node.js (Express), C/C++, SQL
+    \item \textbf{Databases}: OracleSQL, MySQL, Firebase, MongoDB (NoSQL)
+    \item \textbf{Frameworks \& Technologies}: RESTful API design, FastAPI, Spring Boot, PySpark
+    \item \textbf{Cloud \& IaC}: Docker, GitOps
+    \item \textbf{CI/CD \& Automation}: Jenkins, GitHub Actions, unit/integration testing (PyTest, Unittest, Jest - familiar)
+    \item \textbf{Tools \& Platforms}: Hadoop, Kafka, Git, Linux
+    \item \textbf{Core Concepts}: Microservices, API validation \& error handling, Input sanitization, Observability, Testing \& Validation, Infrastructure Automation, Operating Systems, ETL Pipelines
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -113,25 +117,26 @@
 %----------------------------------------------------------------------------------------
 \section{Work Experience}
 
-\begin{jobshort}{Bosch Global Software Technologies \ $|$ \ \href{https://drive.google.com/file/d/1hNmzpBB9Um7AT7RnKK6kc4xhsKgf8IDf/view?usp=sharing}{Associate Software Developer}}{Jan 2024 - present}
+\begin{jobshort}{Bosch Global Software Technologies Pvt. Ltd. \ $|$ \ \href{https://drive.google.com/file/d/1hNmzpBB9Um7AT7RnKK6kc4xhsKgf8IDf/view?usp=sharing}{Associate Software Developer}}{January 2024 - Present}
     \begin{itemize}[itemsep=-5pt]
-        \item Developed and maintained scalable ETL pipelines and data exporters in \textbf{Python}, implementing \textbf{comprehensive unit testing} (using \textbf{PyTest} and \textbf{Unittest} libraries) and validation frameworks that ensured \textbf{99\%+ data integrity} while automating data flows that \textbf{reduced manual processing time by 40\%}.
-        \item Presented technical roadmaps to stakeholders to align data architecture with business goals, resulting in \textbf{improved cross-team collaboration} and \textbf{faster project delivery times by 25\%}.
-        \item Developed, optimized, redesigned and reconfigured multiple data exporters to work within a \textbf{large-scale ETL framework}, enabling \textbf{unified ingestion into several target systems} (like HDFS, Kafka topics, OracleSQL tables, and Splunk indexes) using \textbf{standardized data-models} and a \textbf{harmonizing layer} (to support cross tool dependency); \textbf{leveraged Kafka Producer–Consumer Architecture} and \textbf{PySpark} to boost pipeline scalability and developer efficiency, \textbf{improving data throughput by 35\%} and \textbf{reducing integration effort by 40\%}.
-        \item Optimized backend data handling and XML response processing using \textbf{OracleSQL}, \textbf{Hadoop}, and \textbf{Docker}, \textbf{improving query performance by 45\%} and \textbf{enhancing data reliability across datasets exceeding 10M+ records}, while providing \textbf{production support} to maintain high quality \textbf{live-site operations}.
-        % \item Delivered end-to-end data solutions for internal teams and clients, enabling faster analytics, improved reporting accuracy, and high system uptime.
-        \item Developed an interactive \textbf{Streamlit} frontend to visualize FastAPI endpoint data and deliver fundamental data analytics, improving data accessibility for internal teams and \textbf{reducing lookup and debugging time by 50\% across multiple tools}.
+        \item Developed and maintained scalable ETL pipelines and backend services in \textbf{Python}, implementing  \textbf{comprehensive unit} and \textbf{integration testing} (\textbf{PyTest}, \textbf{Unittest}) and validation logic to ensure \textbf{99\%+ data integrity}; automated data flows reduced manual processing by 40\%.
+        \item Designed and consumed  \textbf{RESTful APIs} with  \textbf{input validation},  \textbf{error handling} and  \textbf{structured logging} to improve reliability and debugging for downstream teams.
+        \item Engineered data exporters within a \textbf{large-scale ETL framework}, enabling  \textbf{unified ingestion} into  \textbf{HDFS, Kafka, Oracle tables and Splunk indexes} using standardized data models and a \textbf{harmonizing layer} (to support cross tool dependency); leveraged \textbf{Kafka} and \textbf{PySpark} to \textbf{boost pipeline scalability} and developer efficiency, \textbf{increasing throughput by 35\%} and \textbf{reducing integration effort by 40\%}.
+        \item Containerized services with \textbf{Docker} and contributed to CI/CD pipelines (\textbf{Jenkins}, \textbf{GitHub Actions}) for automated builds, tests and deployments; supported GitOps-style release flows and environment configuration management.
+        \item Improved backend performance and XML response processing using \textbf{OracleSQL} and \textbf{Hadoop}, achieving \textbf{up to 45\% query performance gains on large datasets} while providing production troubleshooting and monitoring support.
+        \item Built a \textbf{Streamlit frontend} to visualize \textbf{FastAPI endpoints} and provide observability for pipeline data, \textbf{reducing debugging time for engineers by ~50\%}.
+        \item Participated in \textbf{code reviews}, collaborated in \textbf{Agile sprints}, and worked \textbf{cross-functionally with DevOps}, QA and product teams to deliver production-grade services.
     \end{itemize}
 \end{jobshort}
 
 
-\begin{jobshort}{SNTI TATA STEEL LTD. \ $|$ \ \href{https://drive.google.com/file/d/1AJs1bdv-YMY8GrjvO3VE4SJwJIv275PG/view?usp=share_link}{SDE (Intern)}}{Dec 2022 - Jan 2023}
+\begin{jobshort}{SNTI TATA STEEL LTD. \ $|$ \ \href{https://drive.google.com/file/d/1AJs1bdv-YMY8GrjvO3VE4SJwJIv275PG/view?usp=share_link}{SDE (Intern)}}{December 2022 - January 2023}
     \begin{itemize}[itemsep=-5pt]
         \item Built and deployed 'Candidate Report Management System' using \textbf{Java \& MySQL}, which streamlined report workflows and reduced generation time by 30\% through enhanced usability and automation.
     \end{itemize}
 \end{jobshort}
 
-\begin{jobshort}{HighRadius Technologies Pvt. Ltd. \ $|$ \ \href{https://drive.google.com/drive/folders/1L19tKgR8kvodTWy2_siyHbBTPfNWRRSx?usp=share_link}{SDE (Intern)}}{June 2022 - Nov 2022}
+\begin{jobshort}{HighRadius Technologies Pvt. Ltd. \ $|$ \ \href{https://drive.google.com/drive/folders/1L19tKgR8kvodTWy2_siyHbBTPfNWRRSx?usp=share_link}{SDE (Intern)}}{June 2022 - November 2022}
     \begin{itemize}[itemsep=-5pt]
         \item Developed an AI-enabled B2B FinTech Invoice Management Application using ReactJS and \textbf{Servlets}, automating invoice tracking and improving processing efficiency by 35\%.
         \item Engineered seamless database migration workflows from \textbf{MySQL} to Snowflake Data Warehouse via Amazon S3, ensuring secure and lossless data transfer.
@@ -142,11 +147,11 @@
 %	Projects
 %----------------------------------------------------------------------------------------
 \section{Projects}
-\begin{itemize}[leftmargin=*, itemsep=-10pt]
+\begin{itemize}[leftmargin=*, itemsep=0pt]
     \item \textbf{Gamey \ding{213} E-Commerce Marketplace} \hfill \href{https://github.com/ShashankMaurya/Gameyy.git}{(github.com/ShashankMaurya/Gameyy.git)}                                                                                                         \\
-          Developed a marketplace web application using \textbf{Spring Boot} and ReactJS, integrating multiple APIs for real-time data and leveraging \textbf{Google Firebase} caching to improve load performance by 70\% and enhance user experience\\
+          Developed a marketplace web application using \textbf{Spring Boot} and ReactJS, integrating multiple APIs for real-time data and leveraging \textbf{Google Firebase} caching to improve load performance by 70\% and enhance user experience.
 
-    \item \textbf{Notes \ding{213} Offline Notes Manager (Android)} \hfill \href{https://github.com/ShashankMaurya/Notes.git}{(github.com/ShashankMaurya/Notes.git)}                                                                                                           \\
+    \item \textbf{Notes \ding{213} Offline Notes Manager (Android)} \hfill \href{https://github.com/ShashankMaurya/Notes.git}{(github.com/ShashankMaurya/Notes.git)}                                                                                                   \\
           Developed an Android application using \textbf{Java} and Room Database to provide robust, efficient, and reliable offline note management for users.
 \end{itemize}
 
