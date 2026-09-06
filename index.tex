@@ -8,7 +8,12 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES
 %----------------------------------------------------------------------------------------
-\usepackage{url}
+\usepackage{url}\usepackage{iftex}
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+\fi
+
 \usepackage[inline]{enumitem}
 % padding after each itemize environment
 \setlist[itemize]{after=\vspace{-5pt}}
