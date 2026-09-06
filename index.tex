@@ -9,6 +9,11 @@
 %	PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
+\usepackage{iftex}
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+\fi
 \usepackage[inline]{enumitem}
 % padding after each itemize environment
 \setlist[itemize]{after=\vspace{-5pt}}
@@ -95,20 +100,20 @@
 %----------------------------------------------------------------------------------------
 %	Summary
 %----------------------------------------------------------------------------------------
-\section{Summary}
-\noindent\textbf{Software Developer} with 2+ years of experience specializing in \textbf{ETL pipelines}, and large-scale database optimization (OracleSQL, Hadoop). At \textbf{Bosch Global Software Technologies}, led the architecture and development of multiple \textbf{data-exporters} and \textbf{ETL solutions} that improved data processing efficiency by up to 45\% across datasets exceeding 10M+ records. Skilled in \textbf{Java}, \textbf{Python}, \textbf{SQL}, and \textbf{System Design}, with a focus on automation, reliability, and scalable backend architecture. Passionate about leveraging \textbf{AI} and \textbf{cloud} technologies to solve real-world supply chain and enterprise challenges.
+\section{Professional Summary}
+\noindent\textbf{Java Backend Developer} with 2+ years of experience in \textbf{enterprise application development}, scalable backend systems, \textbf{ETL pipelines}, and large-scale database optimization using Oracle SQL and Hadoop. At \textbf{Bosch Global Software Technologies}, led the design and development of data exporters and ETL solutions that improved processing efficiency by up to 45\% across datasets exceeding 10M+ records. Hands-on with \textbf{Java}, \textbf{Spring Boot}, \textbf{REST APIs}, \textbf{Python}, \textbf{SQL}, \textbf{Docker}, \textbf{Jenkins}, \textbf{Kafka}, automated testing, CI/CD, production support, and performance tuning. Focused on reliable, maintainable, cloud-ready backend architecture and cross-functional delivery.
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
-\section{Core Skills}
+\section{Technical Skills}
 \begin{itemize}[leftmargin=*, itemsep=-5pt]
-    \item \textbf{Software Engineering}: Software design, development, optimization, maintenance, testing, debugging, and technical documentation
-    \item \textbf{Programming}: Advanced Python, Core Java, C/C++, HTML/CSS/JS, Bash, SQL
-    \item \textbf{Databases}: OracleSQL, MySQL, Firebase
-    \item \textbf{Frameworks \& Technologies}: Spring Boot, REST/SOAP APIs, FastAPI, Streamlit, PySpark, Kafka
-    \item \textbf{Tools \& Platforms}: Hadoop, Docker, Jenkins, Git, Linux, CI/CD
-    \item \textbf{Core Concepts}: Data Structures \& Algorithms, Database Management, Computer Networks, Operating Systems, ETL Pipelines, System Design, Microservices, UML
+    \item \textbf{Programming}: Java, Python, C/C++, HTML/CSS/JavaScript, Bash, SQL
+    \item \textbf{Java \& Backend}: Spring Boot, REST API development, REST/SOAP APIs, backend development, microservices, system design
+    \item \textbf{Data \& Messaging}: Oracle SQL, MySQL, Firebase, Kafka, PySpark, Hadoop, HDFS, ETL pipelines, data exporters, SQL/RDBMS
+    \item \textbf{DevOps \& Cloud}: Docker, Jenkins, CI/CD pipelines, Git, Linux/Unix, Amazon Web Services (AWS) S3, cloud-ready application development
+    \item \textbf{Quality \& Operations}: PyTest, Unittest, automated testing, debugging, production support, performance tuning, monitoring and logging with Splunk
+    \item \textbf{Engineering Practices}: Software design, development, optimization, maintenance, technical documentation, data structures and algorithms, database management
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -147,7 +152,7 @@
 \section{Projects}
 \begin{itemize}[leftmargin=*, itemsep=0pt]
     \item \textbf{Gamey \ding{213} E-Commerce Marketplace} \hfill \href{https://github.com/ShashankMaurya/Gameyy.git}{(github.com/ShashankMaurya/Gameyy.git)}                                                                                                         \\
-          Developed a marketplace web application using \textbf{Spring Boot} and ReactJS, applying \textbf{software design} and \textbf{backend development} principles to integrate multiple APIs, improve scalability, and enhance user experience with \textbf{Google Firebase} caching.
+          Developed a marketplace web application using \textbf{Java}, \textbf{Spring Boot}, and ReactJS, applying software design and backend development principles to integrate multiple \textbf{REST APIs}, improve scalability, and enhance user experience with \textbf{Google Firebase} caching.
 
     \item \textbf{Notes \ding{213} Offline Notes Manager (Android)} \hfill \href{https://github.com/ShashankMaurya/Notes.git}{(github.com/ShashankMaurya/Notes.git)}                                                                                                   \\
           Developed an Android application using \textbf{Java} and Room Database to provide robust, efficient, and reliable offline note management for users.
